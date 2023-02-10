@@ -1,0 +1,40 @@
+{% extends 'main/base.html' %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+<section class="container-form">
+    <div class="form-login">
+        <div class="form-content">
+            <header>Sign Up</header>
+
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="field input-field">
+                    <input type="text" class="input" placeholder="Username" name='username'>
+                </div>
+
+                <div class="field input-field">
+                    <input type="email" class="input" placeholder="EMail" name='email'>
+                </div>
+
+                <div class="field input-field">
+                    <input type="password" class="input" placeholder="Password" name='password1'>
+                </div>
+
+                <div class="field input-field">
+                    <input type="password" class="input" placeholder="Confirm Password" name='password2'>
+                </div>
+
+                <div class="field button-field">
+                    <button>Sign Up</button>
+                </div>
+
+                <div class="form-link">
+                    <span>Already Have An Account? </span><a href="{% url 'signin' %}" class="signup-link">Sign In</a>
+                </div>
+            </form>
+        </div>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

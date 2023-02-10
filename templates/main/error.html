@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+{% block title %}Error{% endblock %}
+{% block content %}
+<div style="margin-left:20%; margin-top:20%">
+<h1>Something Went Wrong!</h1>
+<p>The error can be:</p>
+</div>
+<div style="margin-left:25%;">
+<ol type='1'>
+    <li>Password aren't match</li>
+    <li>Server error</li>
+    <li>Invalid Data</li>
+    <li>Wrong password or username</li>
+</ol>
+<div style="margin-top:10%; display:flex; align-items:center; justify-content:center">
+<button style="display:flex; align-items:center; justify-content:center"><a href="{% url 'signup' %}" style="text-decoration:none; color: black, background: ;">Log Out</a></button>
+</div>
+</div>
+{% endblock %}
